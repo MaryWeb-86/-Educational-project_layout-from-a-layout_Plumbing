@@ -1,0 +1,724 @@
+body,
+h1,
+ul,
+h4,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    font-family: "PTSans-Regular", sans-serif;
+    z-index: 0;
+}
+
+.wrapper {
+    width: 62.5vw;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+/*---------- Header ---------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5vh 0;
+    margin-bottom: 4.35vh;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    margin-right: 1.35vw;
+}
+
+.header-title {
+    font-size: 1.67vh;
+    line-height: 1.85vh;
+}
+
+.header-iphone {
+    margin-right: 0.47vw;
+}
+
+.header-tel {
+    margin-right: 1.67vw;
+    color: #999999;
+}
+
+.header-search {
+    border: 1px solid #494949;
+    padding: 0.5vw;
+}
+
+/*---------- Description ---------- */
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    height: 55.46vh;
+    overflow: hidden;
+}
+
+.description-left {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.26vh;
+    max-width: 34vw;
+}
+
+.description-title {
+    font-family: "Gilroy-Light", sans-serif;
+    font-size: 5.56vh;
+    line-height: 5.93vh;
+    margin-bottom: 5.37vh;
+    font-weight: 400;
+}
+
+.description-nav {
+    max-width: 19.53vw;
+    margin-bottom: 9vh;
+}
+
+.description-nav-list {
+    list-style-type: none;
+}
+
+.description-nav-item {
+    position: relative;
+    margin-left: 0.78vw;
+    font-size: 1.85vh;
+    line-height: 1.85vh;
+}
+
+.description-nav-item:not(:last-child) {
+    margin-bottom: 2.22vh;
+}
+
+.description-nav-item::before {
+    content: "";
+    display: inline-block;
+    width: 0.3vw;
+    height: 1vh;
+    background-image: url('icons/Vector.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    vertical-align: middle;
+    padding-left: 0.78vw;
+}
+
+.description-line {
+    height: 1px;
+    border: none;
+    background: linear-gradient(90deg, #4B4B4B 0%, rgba(38, 38, 37, 0) 100%);
+    margin-left: 0.78vw;
+    margin-bottom: 2.22vh;
+}
+
+.description-line-bottom {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 2.96vh;
+}
+
+.description-line-bottom-item {
+    width: 31px;
+    height: 2px;
+    background-color: #575757;
+}
+
+.description-line-bottom-item:not(:last-child) {
+    margin-right: 0.52vw;
+}
+
+.description-right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.description-image {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    bottom: -7vh;
+    left: 5vw;
+}
+
+.description-price {
+    position: absolute;
+    padding: 1.38vh;
+    font-size: 2.22vh;
+    line-height: 2.22vh;
+    bottom: 15vh;
+    left: 10vw;
+    z-index: 2;
+}
+
+/*---------- Company ---------- */
+
+.company {
+    display: flex;
+    justify-content: space-between;
+    padding: 7.4vh 0 5.5vh 0;
+    margin-bottom: 6.17vh;
+    z-index: 0;
+}
+
+.about-company {
+    max-width: 30.73vw;
+}
+
+.company-text {
+    font-size: 1.67vh;
+    line-height: 2.5vh;
+    max-width: 30.73vw;
+}
+
+.company-text:not(:last-child) {
+    margin-top: 0;
+}
+
+.first-letter::before {
+    content: "";
+    display: block;
+    float: left;
+    margin: 0.56vh -0.7vw 0 0;
+    width: 3.4vw;
+    height: 4.1vh;
+    background-image: url('icons/О.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.color-text {
+    color: #FE5B00;
+    font-weight: 700;
+    font-size: 1.67vh;
+    line-height: 2.5vh;
+}
+
+.features {
+    max-width: 26vw;
+}
+
+.features-title {
+    font-family: "Glory-Bold";
+    font-size: 1.48vh;
+    line-height: 1.48vh;
+    font-weight: 700;
+    margin: 0;
+}
+
+.features-text {
+    max-width: 16vw;
+    margin-top: 3px;
+    font-size: 1.39vh;
+    line-height: 1.85vh;
+    color: #7B7B7B;
+}
+
+.own-features::before {
+    content: "";
+    display: block;
+    float: left;
+    margin: 0 1.48vw 3.4vh 0;
+    width: 2.53vw;
+    height: 4.27vh;
+    background-image: url('icons/own-production.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.eco-features::before {
+    content: "";
+    display: block;
+    float: left;
+    margin: 0 1.66vw 0 0;
+    width: 2.32vw;
+    height: 5.56vh;
+    background-image: url('icons/eco.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*---------- Products ---------- */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.73vw;
+    margin-bottom: 9.26vh;
+}
+
+.h2 {
+    font-family: "Gilroy-Light";
+    font-size: 2.96vh;
+    line-height: 3.33vh;
+    font-weight: 400;
+}
+
+.products-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.products-item img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.products-line {
+    width: 11.45vw;
+    opacity: 0.3;
+    margin-bottom: 1.85vh;
+}
+
+.products-name {
+    font-family: "gilroy-regular";
+    position: absolute;
+    color: #fff;
+    bottom: 2.03vh;
+    left: 1.25vw;
+    font-weight: 700;
+}
+
+/*---------- Collection ---------- */
+
+.collection {
+    display: flex;
+    margin-bottom: 7.4vh;
+}
+
+.collection-text {
+    max-width: 46.41vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5vh 3.64vw 3.52vh 19.05vw;
+}
+
+.collection-image {
+    max-width: 53.59vw;
+    position: relative;
+}
+
+.collection-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.collection-image-title {
+    position: absolute;
+    left: 4.11vw;
+    top: 7.04vh;
+}
+
+.collection-image-title > span {
+    color: #fff;
+    font-size: 1.67vh;
+    line-height: 2.96vh;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 1.4vh;
+}
+
+.collection-price {
+    padding: 1.38vh;
+    font-size: 2.22vh;
+    line-height: 2.22vh;
+}
+
+/*---------- Goods ---------- */
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 6.48vh;
+    gap: 0;
+}
+
+.goods-item {
+    display: flex;
+    flex-direction: column;
+    padding: 2.22vh 1.04vw;
+    border: 1px solid #ECECEC;
+    margin: 0 -1px -1px 0;
+}
+
+.goods-image {
+    margin-bottom: 1.85vh;
+    position: relative;
+}
+
+.goods-image img {
+    max-width: 9.38vw;
+}
+
+
+.goods-discount {
+    position: absolute;
+    font-size: 1.48vh;
+    line-height: 1.85vh;
+    font-weight: 700;
+    padding: 0.74vh;
+    right: 0;
+    top: -0.5vh;
+}
+
+.goods-description {
+    font-size: 1.48vh;
+    line-height: 2.04vh;
+    margin-bottom: 1.11vh;
+}
+
+.goods-price {
+    margin-top: auto;
+    font-size: 1.85vh;
+    line-height: 1.85vh;
+    font-weight: 700;
+}
+
+.goods-price > span {
+    text-decoration: line-through;
+    font-size: 1.48vh;
+    line-height: 1.48vh;
+    color: #A5A5A5;
+}
+
+/*---------- Advantages ---------- */
+
+.advantages {
+    max-width: 49.95vw;
+    padding: 3.51vh 0 7.41vh 0;
+    margin: 0 auto;
+    margin-bottom: 7.41vh;
+    text-align: center;
+}
+
+.advantages-items {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.return-advantages {
+    max-width: 10.42vw;
+}
+
+.return-advantages::before {
+    content: "";
+    display: block;
+    width: 4.69vw;
+    height: 8.33vh;
+    background-image: url('icons/Refund.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.h3 {
+    font-size: 1.85vh;
+    font-family: "gilroy-regular";
+    line-height: 1.85vh;
+    font-weight: 400;
+}
+
+.advantages-text {
+    font-size: 1.39vh;
+    line-height: 1.85vh;
+    color: #7B7B7B;
+}
+
+.guarantee-advantages {
+    max-width: 14.69vw;
+}
+
+.guarantee-advantages::before {
+    content: "";
+    display: block;
+    width: 4.69vw;
+    height: 8.33vh;
+    background-image: url('icons/Quality.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.payment-advantages {
+    max-width: 14.69vw;
+}
+
+.payment-advantages::before {
+    content: "";
+    display: block;
+    width: 3.58vw;
+    height: 8.33vh;
+    background-image: url('icons/secure.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+/*---------- Orange-bottom ---------- */
+
+.orange-bottom {
+    position: relative;
+}
+
+.bottom-image {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-text {
+    max-width: 62.5vw;
+    text-align: center;
+    font-family: "gilroy-regular";
+    position: absolute;
+    font-size: 2.59vh;
+    line-height: 3.33vh;
+    padding: 3.98vh;
+    bottom: 0;
+    left: 18.75vw;
+}
+
+/*---------- Footer ---------- */
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 5.55vh 0 3.98vh 0;
+}
+
+.footer-title {
+    font-family: "gilroy-regular";
+    font-size: 1.48vh;
+    line-height: 1.48vh;
+    font-weight: 700;
+}
+
+.footer-mail,
+.footer-tel,
+.footer-tg {
+    margin: 1.85vh 0;
+    font-family: "Roboto-Regular";
+    font-size: 1.3vh;
+}
+
+.footer-mail::before {
+    content: "";
+    display: inline-block;
+    width: 1.05vw;
+    height: 1.85vh;
+    background-image: url('icons/mail.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-tel::before {
+    content: "";
+    display: inline-block;
+    width: 1.05vw;
+    height: 1.85vh;
+    background-image: url('icons/tel.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-tg::before {
+    content: "";
+    display: inline-block;
+    width: 1.05vw;
+    height: 1.85vh;
+    background-image: url('icons/tg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Roboto-Regular";
+    font-size: 12px;
+    color: #747474;
+    margin-bottom: 2.22vh;
+}
+
+.copyright-text {
+    margin-right: 1.25vw;
+}
+
+.copyright-button {
+    border: 1px solid #494949;
+    padding: 8px 12px;
+}
+
+.footer-line {
+    border: 1px solid #484848;
+    opacity: 0.5;
+}
+
+.arrow {
+    text-align: center;
+    padding: 3.98vh 0;
+}
+
+/*---------- Fonts ---------- */
+
+@font-face {
+    font-family: "PTSans-Bold";
+    src: url("fonts/PTSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "PTSans-Regular";
+    src: url("fonts/PTSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url("fonts/Gilroy-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url("fonts/Gilroy-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Glory-Bold";
+    src: url("fonts/Glory-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "gilroy-regular";
+    src: url("fonts/gilroy-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("fonts/Roboto-Regular.woff") format("woff");
+}
+
+/*---------- Colors ---------- */
+
+.bg-dark-gray {
+    background-color: #262625;
+}
+
+.bg-light-gray {
+    background-color: #F6F6F6;
+}
+
+.orange {
+    color: #FE5B00;
+}
+
+.bg-orange {
+    background-color: #FE5B00;
+    color: #fff;
+}
+
+.medium-gray {
+    color: #939393;
+}
+
+.light-gray {
+    color: #BEBEBE;
+}
+
+.wight {
+    color: #fff;
+}
+
+/*---------- Media ---------- */
+
+@media screen and (max-width: 1280px) {
+    .wrapper {
+        width: 70vw;
+        margin: 0 auto;
+    }
+    .description-title {
+        font-size: 5.1vh;
+        line-height: 5.1vh;
+        margin-bottom: 5.37vh;
+        color: #fff;
+    }
+    .description-left {
+        max-width: 38vw;
+    }
+    .description-image {
+        max-height: 64vh;
+    }
+    .description-price {
+        bottom: 16vh;
+        left: 13vw;
+    }
+    .about-company {
+        max-width: 43vw;
+    }
+    .company-text {
+        max-width: 40vw;
+    }
+    .features {
+        max-width: 32vw;
+    }
+    .features-text {
+        max-width: 22vw;
+    }
+
+    .products-line {
+        width: 11.45vw;
+        opacity: 0.3;
+        margin-bottom: 1.85vh;
+    }
+
+    .products-name {
+        position: absolute;
+        color: #fff;
+        bottom: 2.15vh;
+        left: 1.25vw;
+    }
+
+    .collection-text {
+        padding-left: 15vw;
+    }
+
+    .bottom-text {
+        padding: 3.98vh 8vw;
+    }
+}
