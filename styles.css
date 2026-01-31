@@ -10,52 +10,77 @@ img {
 .container {
     width: 100vw;
     font-family: "PTSans-Regular", sans-serif;
-    z-index: 0;
 }
 
 .wrapper {
     width: 62.5vw;
     margin: 0 auto;
-    z-index: 0;
 }
 
 /*---------- Header ---------- */
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3.5vh 0;
-    margin-bottom: 4.35vh;
-}
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3.5vh 0;
+        margin-bottom: 4.35vh;
+    }
 
-.header-left,
-.header-right {
-    display: flex;
-    align-items: center;
-}
+    .header-left,
+    .header-right {
+        display: flex;
+        align-items: center;
+    }
 
-.header-logo {
-    margin-right: 1.35vw;
-}
+    .header-logo {
+        margin-right: 1.35vw;
+    }
 
-.header-title {
-    font-size: 1.67vh;
-    line-height: 1.85vh;
-}
+    .header-title {
+        font-size: 1.67vh;
+        line-height: 1.85vh;
+    }
 
-.header-iphone {
-    margin-right: 0.47vw;
-}
+    .header-iphone {
+        margin-right: 0.47vw;
+    }
 
-.header-tel {
-    margin-right: 1.67vw;
-    color: #999999;
-}
+    .header-tel {
+        margin-right: 1.6vw;
+    }
 
-.header-search {
-    border: 1px solid #494949;
-    padding: 0.5vw;
+    .header-search {
+        border: 1px solid #494949;
+        padding: 0.5vw;
+    }
+
+@media (max-width: 819px) {
+
+    .header {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header > div {
+        flex-direction: column;
+    }
+
+    .header-left {
+        padding-top: 2.5vh;
+    }
+
+    .header-logo,
+    .header-title,
+    .header-tel {
+        margin-bottom: 1.4vh;
+    }
+
+    .header-title {
+        display: block;
+    }
 }
 
 /*---------- Description ---------- */
@@ -63,8 +88,6 @@ img {
 .description {
     display: flex;
     justify-content: space-between;
-    height: 55.46vh;
-    overflow: hidden;
 }
 
 .description-left {
@@ -141,17 +164,11 @@ img {
 
 .description-right {
     position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
 }
 
 .description-image {
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    bottom: -7vh;
-    left: 5vw;
+    max-height: 51.4vh;
+    display: block;
 }
 
 .description-price {
@@ -161,8 +178,40 @@ img {
     line-height: 2.22vh;
     bottom: 15vh;
     left: 10vw;
-    z-index: 2;
 }
+
+@media (max-width: 1200px) {
+    .description {
+        flex-direction: column;
+        align-items: center;    
+    }
+    .description-title {
+        font-size: 6vw;
+        text-align: center; 
+    }
+    .description-left,
+    .description-nav {
+        max-width: 100vw;
+        margin-bottom: 4vh;
+    }
+    .description-line-bottom {
+        margin-bottom: 0;
+    }
+    .description-right {
+        max-width: 100vw;
+        text-align: center;
+    }
+    .description-image {
+        max-width: 90vw;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1628px) {
+    .description-title {
+        font-size: 2.8vw;
+    }
+}
+
 
 /*---------- Company ---------- */
 
@@ -192,7 +241,7 @@ img {
     content: "";
     display: block;
     float: left;
-    margin: 0.56vh -0.7vw 0 0;
+    margin: 0.56vh -0.6vw 0 0;
     width: 3.4vw;
     height: 4.1vh;
     background-image: url('icons/О.svg');
@@ -251,6 +300,55 @@ img {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 1024px) {
+    .company {
+        flex-direction: column;
+        margin-bottom: 0;
+        align-items: center;
+    }
+    .company > div {
+        max-width: 100vw;
+    }
+    .about-company > p {
+        max-width: 100vw;
+    }
+    .features {
+        display: flex;
+        flex-direction: column;    
+    }
+    .own-features > p {
+        max-width: 100%;
+    }
+    .eco-features > p {
+        max-width: 100%;
+    }
+    .own-features::before,
+    .eco-features::before {
+        margin: 0 3px 0 0;
+        height: 1.6vh;
+    }
+    .first-letter::before {
+        margin: 0.4vh -0.3vw 0 0;
+        width: 3.2vw;
+        height: 2vh;
+    }
+}
+
+@media (max-width: 660px) {
+    .first-letter::before {
+        margin: 0.4vh 0.4vw 0 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1628px) {
+    .own-features::before,
+    .eco-features::before {
+        margin: 0 1px 0 0;
+        height: 1.5vh;
+    } 
+}
+
+
 /*---------- Products ---------- */
 
 .products {
@@ -294,6 +392,20 @@ img {
     font-weight: 700;
 }
 
+@media (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+@media (max-width: 819px) {
+    .products {
+        grid-template-columns: 1fr;
+        gap: 2vh;
+    }
+}
+
 /*---------- Collection ---------- */
 
 .collection {
@@ -325,7 +437,7 @@ img {
     top: 7.04vh;
 }
 
-.collection-image-title > span {
+.collection-image-title>span {
     color: #fff;
     font-size: 1.67vh;
     line-height: 2.96vh;
@@ -338,6 +450,21 @@ img {
     padding: 1.38vh;
     font-size: 2.22vh;
     line-height: 2.22vh;
+}
+
+@media (max-width: 1024px) {
+    .collection {
+        flex-direction: column;
+        align-items: center;
+        background-color: #262625;
+    }
+    .collection-text {
+        max-width: 100vw;
+        padding: 2vh 10vw;
+    }
+    .collection-image {
+        max-width: 70vw;
+    }
 }
 
 /*---------- Goods ---------- */
@@ -390,11 +517,24 @@ img {
     font-weight: 700;
 }
 
-.goods-price > span {
+.goods-price>span {
     text-decoration: line-through;
     font-size: 1.48vh;
     line-height: 1.48vh;
     color: #A5A5A5;
+}
+
+@media (max-width: 1024px) {
+    .goods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 819px) {
+    .goods {
+        grid-template-columns: 1fr;
+        gap: 2vh;
+    }
 }
 
 /*---------- Advantages ---------- */
@@ -477,6 +617,31 @@ img {
     margin: 0 auto;
 }
 
+@media (max-width: 1024px) {
+    .advantages {
+        margin-bottom: 0;
+    }
+    .advantages-items {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .advantages-items > div {
+        max-width: 90%;
+    }
+    .return-advantages::before {
+        width: 6vw;
+        height: 6vh;
+    }
+    .guarantee-advantages::before {
+        width: 6vw;
+        height: 6vh;
+    }
+    .payment-advantages::before {
+        width: 6vw;
+        height: 6vh;
+    } 
+}
+
 /*---------- Orange-bottom ---------- */
 
 .orange-bottom {
@@ -505,7 +670,27 @@ img {
     line-height: 3.33vh;
     padding: 3.98vh;
     bottom: 0;
-    left: 18.75vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+@media (max-width: 1024px) {
+    .bottom-text {
+        max-width: 60%;
+        max-height: 22%;
+        font-size: 2.2vh;
+        line-height: 2.2vh;
+        padding: 2%;
+    }
+}
+
+@media (max-width: 819px) {
+    .bottom-text {
+        font-size: 8px;
+        line-height: 0.8vh;
+        max-height: 30%;
+    }
 }
 
 /*---------- Footer ---------- */
@@ -599,6 +784,47 @@ img {
     padding: 3.98vh 0;
 }
 
+@media (max-width: 819px) {
+    .footer {
+        flex-direction: column;
+        padding: 3vh 0 0 0;
+    }
+    .footer > div {
+        margin-left: 0;
+        padding-left: 0;
+        max-width: 100%;
+    }
+    .footer-item {
+        margin-bottom: 1.85vh;
+    }
+    .footer-copyright {
+        max-width: 100vw;
+    }
+    .footer-mail::before {
+        width: 2vw;
+        height: 1.8vh;
+    }
+    .footer-tel::before {
+        width: 2vw;
+        height: 1.8vh;
+    }
+    .footer-tg::before {
+        width: 2vw;
+        height: 1.8vh;
+    }
+}
+
+@media (min-width: 819px) and (max-width: 1400px) {
+
+    .footer-menu {
+        min-width: 85vw;
+    }
+    .description-nav-item {
+        font-size: 1.4vw;
+    }
+
+}
+
 /*---------- Fonts ---------- */
 
 @font-face {
@@ -665,62 +891,4 @@ img {
 
 .wight {
     color: #fff;
-}
-
-/*---------- Media ---------- */
-
-@media screen and (max-width: 1280px) {
-    .wrapper {
-        width: 70vw;
-        margin: 0 auto;
-    }
-    .description-title {
-        font-size: 5.1vh;
-        line-height: 5.1vh;
-        margin-bottom: 5.37vh;
-        color: #fff;
-    }
-    .description-left {
-        max-width: 38vw;
-    }
-    .description-image {
-        max-height: 64vh;
-    }
-    .description-price {
-        bottom: 16vh;
-        left: 13vw;
-    }
-    .about-company {
-        max-width: 43vw;
-    }
-    .company-text {
-        max-width: 40vw;
-    }
-    .features {
-        max-width: 32vw;
-    }
-    .features-text {
-        max-width: 22vw;
-    }
-
-    .products-line {
-        width: 11.45vw;
-        opacity: 0.3;
-        margin-bottom: 1.85vh;
-    }
-
-    .products-name {
-        position: absolute;
-        color: #fff;
-        bottom: 2.15vh;
-        left: 1.25vw;
-    }
-
-    .collection-text {
-        padding-left: 15vw;
-    }
-
-    .bottom-text {
-        padding: 3.98vh 8vw;
-    }
 }
